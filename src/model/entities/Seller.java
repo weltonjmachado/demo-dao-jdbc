@@ -5,13 +5,13 @@ import java.util.Objects;
 
 public class Seller {
 	
-	private static final long serialVersionUID = 1L;
+	private static final long serialVersionUid = 1L;
 	
-	private Integer Id;
+	private Integer id;
 	private String name;
 	private String email;
 	private Date birthDate;
-	public double baseSalary;
+	private Double baseSalary;
 	
 	private Department department;
 	
@@ -19,31 +19,18 @@ public class Seller {
 		
 	}
 
-
-	
-	
-	
-
-
-	public Seller(Integer id, String name, String email, Date birthDate, double baseSalary, Department department) {
-		super();
-		Id = id;
+	public Seller(Integer id, String name, String email, Date birthDate, Double baseSalary, Department department) {
+		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.birthDate = birthDate;
 		this.baseSalary = baseSalary;
 		this.department = department;
 	}
-
-
-
-
-
-
-
+	
 	@Override
 	public int hashCode() {
-		return Objects.hash(Id);
+		return Objects.hash(id);
 	}
 
 	@Override
@@ -55,15 +42,15 @@ public class Seller {
 		if (getClass() != obj.getClass())
 			return false;
 		Seller other = (Seller) obj;
-		return Objects.equals(Id, other.Id);
+		return Objects.equals(id, other.id);
 	}
 
 	public Integer getId() {
-		return Id;
+		return id;
 	}
 
 	public void setId(Integer id) {
-		Id = id;
+		this.id = id;
 	}
 
 	public String getName() {
@@ -94,13 +81,21 @@ public class Seller {
 		return baseSalary;
 	}
 
-	public void setBaseSalary(double baseSalary) {
+	public void setBaseSalary(Double baseSalary) {
 		this.baseSalary = baseSalary;
+	}
+
+	public Department getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(Department department) {
+		this.department = department;
 	}
 
 	@Override
 	public String toString() {
-		return "Seller [Id=" + Id + ", name=" + name + ", email=" + email + ", birthDate=" + birthDate + ", baseSalary="
+		return "Seller [id=" + id + ", name=" + name + ", email=" + email + ", birthDate=" + birthDate + ", baseSalary="
 				+ baseSalary + ", department=" + department + "]";
 	}
 
