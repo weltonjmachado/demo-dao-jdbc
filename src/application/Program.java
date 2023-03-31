@@ -19,7 +19,7 @@ public class Program {
 		SellerDao sellerDao = DaoFactory.createSellerDao();
 		DepartmentDao departmentDao = DaoFactory.createDepartmentDao();
 		
-		/*Programa para operações com Seller
+		/*Seller Operation program
 		System.out.println("=== Test 1: seller findById =====");
 		
 		Seller seller = sellerDao.findById(3);
@@ -60,7 +60,7 @@ public class Program {
 		sellerDao.deleteById(id);
 		System.out.println("Delete Completed");*/
 		// -------------------------------------------------------------------------------------------
-		//Programa para operações com Department
+		//Department Operations Program
 		
 		System.out.println("=== Test 1: department findById =====");
 		Department department = departmentDao.findById(1);
@@ -82,15 +82,15 @@ public class Program {
 		
 		System.out.println("Inserted! New Id: " + newDepartment.getId());*/
 		
-		System.out.println("\n=== Test 4: department update =====");
+		/*System.out.println("\n=== Test 4: department update =====");
 			department = departmentDao.findById(8);
 			department.setName("Fashion");
 			departmentDao.update(department);
-			System.out.println("Updated complete!");
+			System.out.println("Updated complete!");*/
 			
-		System.out.println("\n=== Test 5: delete department=====");
+		/*System.out.println("\n=== Test 5: delete department=====");
 		
-		/*System.out.printf("Enter Id for delete Test: ");
+		System.out.printf("Enter Id for delete Test: ");
 		int id = sc.nextInt();
 		departmentDao.deleteById(id);
 		System.out.println("Delete Completed");*/
